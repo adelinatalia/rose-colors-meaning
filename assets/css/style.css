@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    height: 20vh;
+    background-image: url(../img/flowers-header.png);
+    background-size: contain;
+}
+.heading {
+    position: relative;
+    top: 15vh;
+}
+
+main {
+    height: 70vh;
+}
+
+footer {
+    height: 10vh;
+    background-image: url(../img/flowers-footer.png);
+    background-size: contain;
+}
