@@ -1,8 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --bg-card-color: #f6f2e1;
+    --heading: #C6A57F;
+    --heading-light: #CCBEAD;
+    --txt: #857561;
+    --border: #DDBE9A;
+}
+
+body {
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+h1 {
+    color: var(--heading);
+}
+
+h2 {
+    color: var(--heading-light);
+}
+
+/* general */
 .center-column {
     display: flex;
     flex-direction: column;
@@ -11,13 +34,15 @@
 }
 
 header {
-    height: 20vh;
+    height: 18vh;
     background-image: url(../img/flowers-header.png);
     background-size: contain;
 }
+
 .heading {
     position: relative;
-    top: 15vh;
+    top: 14vh;
+    text-align: center;
 }
 
 main {
@@ -28,4 +53,12 @@ footer {
     height: 10vh;
     background-image: url(../img/flowers-footer.png);
     background-size: contain;
+    color: var(--txt);
+}
+
+/* style */
+.deco-line {
+    width: 3rem;
+    font-size: 2rem;
+    color: var(--heading-light);
 }
