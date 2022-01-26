@@ -6,15 +6,22 @@
 }
 
 :root {
-    --bg-card-color: #f6f2e1;
+    --bg-color: #FFFCFA;
     --heading: #C6A57F;
     --heading-light: #CCBEAD;
     --txt: #857561;
     --border: #DDBE9A;
 }
 
+/* html {
+    height: 100%;
+} */
+
 body {
+    /* min-height: 100%; */
+    /* position: relative; */
     font-family: 'Cinzel Decorative', cursive;
+    background-color: var(--bg-color);
 }
 
 h1 {
@@ -25,7 +32,7 @@ h2 {
     color: var(--heading-light);
 }
 
-/* general */
+/* general style */
 .center-column {
     display: flex;
     flex-direction: column;
@@ -33,32 +40,163 @@ h2 {
     align-items: center;
 }
 
-header {
-    height: 18vh;
-    background-image: url(../img/flowers-header.png);
-    background-size: contain;
-}
-
-.heading {
-    position: relative;
-    top: 14vh;
-    text-align: center;
-}
-
-main {
-    height: 70vh;
-}
-
-footer {
-    height: 10vh;
-    background-image: url(../img/flowers-footer.png);
-    background-size: contain;
-    color: var(--txt);
-}
-
-/* style */
 .deco-line {
     width: 3rem;
     font-size: 2rem;
     color: var(--heading-light);
+}
+
+/* HEADER */
+.header {
+    width: 98vw;
+    height: 28vh;
+    background-image: url(../img/flowers-header.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+}
+
+.heading {
+    text-align: center;
+}
+
+/* MAIN */
+main {
+    width: 90vw;
+    min-height: 100%;
+    /* min-height: 100vh; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3.5rem auto;
+}
+
+/* CARD */
+.card {
+    width: 37vw;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 1rem;
+    /* border: 3px double var(--border); */
+    /* border-style: double solid solid double; */
+    border-top: 1px solid var(--border);
+    border-bottom: 5px double var(--border);
+    border-left: 5px double var(--border);
+    border-right: 1px solid var(--border);
+    border-radius: 5px;
+    transition: 1.5s ease;
+}
+.card:hover {
+    transform: scale(1.2, 1.2);
+}
+
+/* card content */
+.card-content {
+    width: 50vw;
+}
+
+.card-content h2 {
+    font-size: 1.2em;
+    padding-bottom: 1rem;
+    color: var(--heading);
+}
+
+.card-content p {
+    font-size: 0.9em;
+    line-height: 1.2em;
+    color: var(--txt);
+}
+
+/* card images */
+.card-img-box {
+    width: 15rem;
+    height: 10rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card-img {
+    margin: 0 auto;
+    transition: 1s ease;
+    position: relative;
+    top: -18rem;
+}
+.card-img:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.card-img-frame {
+    position: relative;
+    top: -4.3rem;
+}
+
+/* CARD IMAGE LEFT */
+.card-left {
+    border-left: 1px solid var(--border);
+    border-right: 5px double var(--border);
+}
+.card-left .card-content {
+    padding-right: -1rem;
+}
+.card-img-frame-left {
+    left: -3.5rem;
+    transform: rotate(-15deg);
+}
+.card-img-left {
+    left: 3.5rem;
+}
+
+/* CARD IMAGE RIGHT */
+.card-right .card-content {
+    padding-left: 2.5rem;
+}
+.card-img-frame-right {
+    top: -3.9rem;
+    left: 0.5rem;
+    transform: rotate(-10deg);
+}
+.card-img-right {
+    left: 5rem;
+}
+
+/* FOOTER */
+footer {
+    height: 20vh;
+    margin-top: 3rem;
+    margin-bottom: auto;
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+    color: var(--txt);
+}
+.footer {
+    width: 100%;
+    height: 19vh;
+    background-image: url(../img/flowers-footer.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+}
+.footer-bottom {
+    width: 100%;
+    padding: 1rem;
+    font-size: 0.7em;
+    text-align: center;
+    background-color: #DDD6C2;
+    color: var(--txt);
+}
+
+/* responsive */
+@media only screen and (max-width: 990px) {
+    main {
+        margin-top: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        width: 80vw;
+        height: auto;
+    }
 }
