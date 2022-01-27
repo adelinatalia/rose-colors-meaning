@@ -13,7 +13,7 @@ function displayCards(arr) {
             <div class="card-img-box">
                 <img src="./assets/img/frame-flowers-left.png" alt="rose frame" width="300"
                     class="card-img-frame card-img-frame-left">
-                <img src="../assets/${arr[el].img}" alt="${arr[el].name}" width="120" class="card-img card-img-left"
+                <img src="./assets/${arr[el].img}" alt="${arr[el].name}" width="120" class="card-img card-img-left"
                     id="card-img-left-1">
             </div>
             <div class="card-content">
@@ -32,7 +32,7 @@ function displayCards(arr) {
             <div class="card-img-box">
                 <img src="./assets/img/frame-flowers-right.png" alt="rose frame" width="300"
                     class="card-img-frame card-img-frame-right">
-                <img src="../assets/${arr[el].img}" alt="${arr[el].name}" width="120" class="card-img card-img-right">
+                <img src="/assets/${arr[el].img}" alt="${arr[el].name}" width="120" class="card-img card-img-right">
             </div>
         </section>
             `
