@@ -13,13 +13,7 @@
     --border: #DDBE9A;
 }
 
-/* html {
-    height: 100%;
-} */
-
 body {
-    /* min-height: 100%; */
-    /* position: relative; */
     font-family: 'Cinzel Decorative', cursive;
     background-color: var(--bg-color);
 }
@@ -59,19 +53,25 @@ h2 {
     text-align: center;
 }
 
+.logo {
+    margin-top: -2.5rem;
+    margin-bottom: 0.7rem;
+}
+
 /* MAIN */
 main {
-    width: 90vw;
-    min-height: 100%;
-    /* min-height: 100vh; */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 3.5rem auto;
+    margin: 2.5rem auto;
 }
 
 /* CARD */
+#cards-container {
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
 .card {
     width: 37vw;
     height: 10rem;
@@ -79,8 +79,6 @@ main {
     justify-content: center;
     align-items: center;
     margin: 2rem 1rem;
-    /* border: 3px double var(--border); */
-    /* border-style: double solid solid double; */
     border-top: 1px solid var(--border);
     border-bottom: 5px double var(--border);
     border-left: 5px double var(--border);
@@ -94,7 +92,7 @@ main {
 
 /* card content */
 .card-content {
-    width: 50vw;
+    width: 70vw;
 }
 
 .card-content h2 {
@@ -138,7 +136,7 @@ main {
     border-right: 5px double var(--border);
 }
 .card-left .card-content {
-    padding-right: -1rem;
+    padding-right: 0.5rem;
 }
 .card-img-frame-left {
     left: -3.5rem;
@@ -150,7 +148,7 @@ main {
 
 /* CARD IMAGE RIGHT */
 .card-right .card-content {
-    padding-left: 2.5rem;
+    padding-left: 1.5rem;
 }
 .card-img-frame-right {
     top: -3.9rem;
@@ -163,24 +161,21 @@ main {
 
 /* FOOTER */
 footer {
-    height: 20vh;
-    margin-top: 3rem;
+    width: 100%;
+    margin-top: 5.5rem;
     margin-bottom: auto;
-    /* position: absolute;
-    bottom: 0;
-    left: 0; */
     color: var(--txt);
 }
 .footer {
     width: 100%;
-    height: 19vh;
+    height: 20vh;
     background-image: url(../img/flowers-footer.png);
     background-size: contain;
     background-repeat: repeat-x;
 }
 .footer-bottom {
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 0;
     font-size: 0.7em;
     text-align: center;
     background-color: #DDD6C2;
